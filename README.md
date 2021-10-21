@@ -8,7 +8,5 @@ Expressando is a real-time sign language detection system made using OpenCV, Ker
 
 OpenCV, NumPy, TensorFlow, Keras, SciPy
 
-# Aim:
-
 To predict the sign language detection system based on dataset with atmost accuracy. 
 # Something extra
