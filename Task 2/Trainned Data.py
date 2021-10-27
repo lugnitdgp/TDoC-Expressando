@@ -17,7 +17,7 @@ if not os.path.exists("data"):
     os.makedirs("data/train/5 front")
     os.makedirs("data/train/5 back")
     
- 
+  
 mode = 'train'
 directory = 'data/'+mode+'/'
 
