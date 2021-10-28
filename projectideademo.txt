@@ -1,0 +1,14 @@
+Project idea: To add gestures to existing ones and create a menu based system called "The Corner". A menu based system that works on 6 gestures. Also add voice control and Computer vision throughout the process.
+
+How much have I been able to implement:
+1. Added gestures and trained the model.
+2. Wrote a file VOICEINSTRUCTIIONS.py to inculcate the start of voice using pyttsx3 package
+3. Tried implementing action of opening applications using finger recognition using subprocess package
+
+Where I failed:
+1. My project was to be based purely on mediapipe package to create an almost touch like effect on thin air, all while doing a quiz or drawing, and i couldnt access the solutions package of it, hence couldnt define fucntions like select and normal movement
+2. Irregular working of subprocess package due to my lack of knowledge.
+3. Training almost 10 gestures reduces ability of model to differentiate especially between five and five opposite and 2 and call.
+
+Future Scope:
+Creating a multi tier level quiz, a squid game replica of honeycomb, a drawing canvas, accessing smart home equipments using their ip and accessing computer applications using a menu that works on finger recognition could be implemented, thus creating an almost phone screen like effectin thin air.
