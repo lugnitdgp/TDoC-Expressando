@@ -42,13 +42,12 @@ while True:
     
     cv2.rectangle(frame, (100, 100), (500, 500), (255, 255, 255), 2)
     roi = frame[100:500, 100:500]
-    roi = cv2.resize(roi, (64, 64))
-    cv2.putText(frame, "R.O.I", (270, 550), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, (0,225,0), 2)
-    cv2.imshow("Frame", frame)
-
-    
     roi = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
     roi = cv2.adaptiveThreshold(roi, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 91, 1)
+    roi = cv2.resize(roi, (64, 64)) 
+    roi = roi.reshape(64, 64, 1)
+    cv2.putText(frame, "R.O.I", (270, 550), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, (0,225,0), 2)
+    cv2.imshow("Frame", frame)
     cv2.imshow("ROI", roi)
     
     interrupt = cv2.waitKey(10) 
