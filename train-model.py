@@ -29,13 +29,13 @@ test_datagen = ImageDataGenerator(rescale=1./255) #epoch
 
 training_set = train_datagen.flow_from_directory('data/train',
                                                  target_size=(64, 64),
-                                                 batch_size=5,
+                                                 batch_size=3,
                                                  color_mode='grayscale',
                                                  class_mode='categorical')
 
 test_set = test_datagen.flow_from_directory('data/test',
                                             target_size=(64, 64),
-                                            batch_size=5,
+                                            batch_size=3,
                                             color_mode='grayscale',
                                             class_mode='categorical') 
 
@@ -44,7 +44,4 @@ classifier.fit_generator(
         epochs=10,
         validation_data=test_set)
 
-#Saving
-# model_json = classifier.to_json()
-# with open("model-bw.json", "w") as json_file:
 classifier.save("model.h5")
